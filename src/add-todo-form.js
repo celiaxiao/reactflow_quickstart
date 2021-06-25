@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import Button from './Buton'
+import Button from './Button'
 
+//the header to decide whether to show form
 const Form = ({title, onAdd, showAdd}) => {
     return (
         <header className='header'>
@@ -14,7 +15,7 @@ const Form = ({title, onAdd, showAdd}) => {
 }
 
 Form.defaultProps = {
-    title: 'Task Tracker',
+    title: 'Add new node',
 }
 
 Form.propTypes = {
@@ -22,4 +23,4 @@ Form.propTypes = {
   }
 
 
-export default Header
+export default Form

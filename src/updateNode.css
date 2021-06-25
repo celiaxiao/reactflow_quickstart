@@ -19,3 +19,20 @@
     display: flex;
     align-items: center;
   }
+
+
+.add_new_node {
+  font-size: 12px;
+  position: absolute;
+    right: 300px;
+    top: 0px;
+    z-index: 4;
+}
+
+.display_node {
+  font-size: 12px;
+  position: absolute;
+    right: 400px;
+    top: 70px;
+    z-index: 4;
+}
