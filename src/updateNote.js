@@ -9,11 +9,27 @@ const initialElements = [
   { id: 'e1-2', source: '1', target: '2' },
 ];
 
+  
+  const [tasks, setTasks] = useState([])
+
+  
+
 const UpdateNode = () => {
+  const [showAddTask, setShowAddTask] = useState(false)
   const [elements, setElements] = useState(initialElements);
   const [nodeName, setNodeName] = useState('Node 1');
   const [nodeBg, setNodeBg] = useState('#eee');
   const [nodeHidden, setNodeHidden] = useState(false);
+
+  const deteleNode = (id) => {
+
+  }
+
+  const addNode = (id) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newTask = { id, ...task }
+    setTasks([...tasks, newTask])
+  }
 
   useEffect(() => {
     setElements((els) =>
@@ -62,6 +78,11 @@ const UpdateNode = () => {
   return (
     <ReactFlow elements={elements} defaultZoom={1.5} minZoom={0.2} maxZoom={4}>
       <div className="updatenode__controls">
+
+        <Form 
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}/>
+
         <label>label:</label>
         <input
           value={nodeName}
